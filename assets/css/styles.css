@@ -112,17 +112,29 @@ h3 {
 }
 
 .info-section h3 {
+    padding-left: 40px;
     width: 50%;
 }
 
 .info-section article {
     font-size: 20px;
     width: 50%;
+    text-align: center;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+.info-list {
+    list-style-position: inside;
+    list-style-type: none;
+}
+/* info style above */
+
+/* projects style below */
 .projects h2 {
     width: 100%;
-    border: 1px solid black;
     text-align: center;
     font-size: 55px;
 } 
@@ -138,16 +150,13 @@ h3 {
     height: 30vh;
     margin-top: 10vh;
     margin-bottom: 10vh;
-    border: 1px solid black;
+    border: 3px solid var(--nav-color);
+    border-radius: 2vw 2vw 2vw 0;
     display: flex;
     align-items: flex-end;
     text-decoration: none;
     color: black;
-}
 
-.project-box > a:hover {
-    background-color: blue;
-    backdrop-filter: blur(6px);
 }
 
 .bottom-left {
@@ -162,17 +171,28 @@ h3 {
 
 #project-1 {
     width: 90vw;
+    background-image: url("../images/project-1.png");
+    background-size: cover;
 }
 
-/* aplication style ends */
+#run-buddy {
+    background-image: url("../images/run-buddy.png");
+    background-size: cover;
+}
 
-/* contact section starts */
+.project-box > a:hover {
+    filter: grayscale(1);
+}
+
+/* projects style above */
+
+/* contact section below */
 .contact {
     background-color: var(--nav-color);
 }
-/* contact section ends */
+/* contact section above */
 
-/* media query for smaller desktop screens and smaller */
+/* media queries for smaller screens */
 @media screen and (max-width: 1215px) {
     .image-box img {
         width: 50%;
@@ -187,7 +207,25 @@ h3 {
     }
 }
 
-/* media query for tablets and smaller */
+@media screen and (max-width: 948px) {
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info-section h3 {
+        padding-left: 0;
+        width: 100%;
+        font-size: 50px;
+    }
+
+    .info-section article {
+        font-size: 25px;
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 768px) {
     header {
         margin-bottom: 0;

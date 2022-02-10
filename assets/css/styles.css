@@ -78,6 +78,23 @@ header {
 .title-box div {
     font-size: 30px;
 }
+
+.links {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    font-size: 25px;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+}
+
+.links a:hover {
+    font-weight: bold;
+}
 /* header styles above */
 
 /* background style starts */
@@ -116,7 +133,7 @@ h3 {
     justify-content: space-around;
 }
 
-.project-box > div {
+.project-box > a {
     width: 40vw;
     height: 30vh;
     margin-top: 10vh;
@@ -124,6 +141,13 @@ h3 {
     border: 1px solid black;
     display: flex;
     align-items: flex-end;
+    text-decoration: none;
+    color: black;
+}
+
+.project-box > a:hover {
+    background-color: blue;
+    backdrop-filter: blur(6px);
 }
 
 .bottom-left {
@@ -133,11 +157,13 @@ h3 {
     border-top-right-radius: 5px;
     padding: 2px 5px;
     background-color: rgb(255, 255, 255, 0.5);
+    backdrop-filter: blur(6px);
 }
 
 #project-1 {
     width: 90vw;
 }
+
 /* aplication style ends */
 
 /* contact section starts */
@@ -145,3 +171,40 @@ h3 {
     background-color: var(--nav-color);
 }
 /* contact section ends */
+
+/* media query for smaller desktop screens and smaller */
+@media screen and (max-width: 1215px) {
+    .image-box img {
+        width: 50%;
+    }
+    
+    .image-box, .title-box {
+        width: 100vw;
+    }
+
+    .title-box h1, .title-box div {
+        text-align: center;
+    }
+}
+
+/* media query for tablets and smaller */
+@media screen and (max-width: 768px) {
+    header {
+        margin-bottom: 0;
+    }
+    
+    .links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .links a {
+        margin: 10px auto;
+        font-size: 35px;
+    }
+}
+
+/* media query for mobile phones and smaller */
+@media screen and (max-width: 575px) {
+    
+}

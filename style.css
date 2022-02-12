@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: rgb(156, 247, 247);
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    width: 20%;
+    flex-wrap: wrap;
+}
+
+.resume {
+    background-color: rgb(85, 255, 255);
+    border: 1px solid black;
+    width: 80%;
+    float: right;
+}
+
+header {
+
+}
+
+.wrap {
+    display: block;
+}
+
+header img {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.info {
+    background-color: azure;
+}

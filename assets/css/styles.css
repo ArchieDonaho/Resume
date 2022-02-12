@@ -44,11 +44,14 @@ nav a {
     color: black;
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.541);
     padding: 10px;
+    transition: 0.2s;
 }
 
 nav a:hover {
-    border-bottom: 1px solid black;
+    text-decoration: underline;
 }
+
+
 /* navigation styles above */
 
 /* header styles below */
@@ -97,11 +100,27 @@ header {
 
 .links a {
     text-decoration: none;
+    font-size: 38px;
     color: black;
+    transition: 0.2s;
 }
 
-.links a:hover {
-    font-weight: bold;
+#github:hover {
+    color: rgb(0, 179, 0);
+    text-shadow: 1px 0 0 rgb(0, 179, 0);
+    text-shadow: -1px 0 0 rgb(0, 179, 0);
+}
+
+#linkedin:hover {
+    color: rgb(0, 121, 219);
+    text-shadow: 1px 0 0 rgb(0, 121, 219);
+    text-shadow: -1px 0 0 rgb(0, 121, 219);
+}
+
+#instagram:hover {
+    color: rgb(216, 0, 198);
+    text-shadow: 1px 0 0 rgb(216, 0, 198);
+    text-shadow: -1px 0 0 rgb(216, 0, 198);
 }
 /* header styles above */
 
@@ -165,7 +184,12 @@ h3 {
     text-decoration: none;
     color: black;
     filter: grayscale(1);
+    transition: 0.3s;
+}
 
+.project-box > a:hover {
+    filter: grayscale(0);
+    border-color: black;
 }
 
 .bottom-left {
@@ -187,11 +211,11 @@ h3 {
 #run-buddy {
     background-image: url("../images/run-buddy.png");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.project-box > a:hover {
-    filter: grayscale(0);
-    border-color: black;
+#project-3, #project-4, #project-5 {
+       
 }
 
 /* projects style above */
@@ -208,8 +232,12 @@ h3 {
     font-size: 3vw;
 }
 
+.contact div {
+    text-align: right;
+}
+
 .contact div, .contact ul li {
-    font-size: 1.5vw;
+    font-size: 2vw;
 }
 
 .contact h2, .contact div, .contact ul {
@@ -302,6 +330,11 @@ h3 {
         margin: 10px auto;
         font-size: 35px;
     }
+
+    .contact div, .contact ul li {
+        font-size: 4vw;
+        margin: 0 auto;
+    }    
 }
 
 /* media query for mobile phones and smaller */
